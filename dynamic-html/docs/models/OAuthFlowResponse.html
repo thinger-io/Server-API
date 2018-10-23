@@ -1,0 +1,27 @@
+
+<h2>OAuthFlowResponse</h2>
+<ul class="parameter">
+  <li class="param-required-false">access_token : String
+    <br/>Contains a JWT token that contains fields like exp (expiration timestamp), iat (issued at), or usr (which represent the granted user account). Expiration timestamp (UTC seconds from 1970) can be used to know when it is required to refresh the access token, which usually have a life span of some hours. 
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">expires_in : BigDecimal
+    <br/>Number of seconds while the provided access token will be valid in the server. 
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">resfresh_token : String
+    <br/>Contains a JWT token that contains fields like exp (expiration timestamp), iat (issued at), or jti (internal token identifier). Refresh tokens can be used to both obtain new access and refresh tokens over the OauthRefreshTokenFlow. Expiration timestamp (UTC seconds from 1970) provides a timestamp that indicates when the token will become invaild, so it could not be used for getting new access or refresh tokens. It usually have a life span of some months, if not invalidated in the server. 
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">scope : String
+    <br/>By default it will be always null. 
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-false">token_type : String
+    <br/>By default it will be always bearer. It means that the provided access token should be included in the Authorization header. It can be used alternativelly as a request parameter called &#x27;autorization&#x27;  
+  </li>
+</ul>
